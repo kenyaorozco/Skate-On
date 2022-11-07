@@ -114,22 +114,7 @@ class User:
         print(one_user)
         return results
 
-    # @classmethod
-    # def get_by_name(cls,data):
-    #     query = "SELECT * FROM users JOIN sasquatch ON sasquatch.users_id = users.id WHERE users.id = %(id)s;"
-    #     results = connectToMySQL('skate_schema').query_db(query,data)
 
-        # user = cls( results[0] )
-        # for sasquatch_row in results:
-        #     sasquatch_data = {
-        #         "id":sasquatch_row["sasquatch.id"],
-        #         "location":sasquatch_row["sasquatch.location"],
-        #         "incident":sasquatch_row["sasquatch.incident"],
-        #         "date":sasquatch_row["sasquatch.date"],
-        #         "number":sasquatch_row["sasquatch.number"],                
-        #     }
-        #     user.sasquatch.append(Post(sasquatch_data))
-        # return user
 
 
     @classmethod
