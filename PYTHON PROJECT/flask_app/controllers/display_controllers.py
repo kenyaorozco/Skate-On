@@ -9,23 +9,10 @@ from flask_bcrypt import Bcrypt
 from flask_app.api import find_shops
 bcrypt = Bcrypt(app) 
 
-# import requests
-# import os
-# print( os.environ.get("FLASK_APP_API_KEY") )
-# from flask import jsonify
-
-# @app.route('/searching'):
-#     r = requests.get(f"https:api.information.com/{os.environ.get('FLASK_API_KEY')}")
-#     # we must keep in line with JSON format.
-#     # requests has a method to convert the data coming back into JSON.
-#     return jsonify( r.json() )
-
 
 
 @app.route("/")
 def display_page():
-    # shops=find_shops('location')
-    # print(shops)
     return render_template("display.html")
 
 app.route("/")
