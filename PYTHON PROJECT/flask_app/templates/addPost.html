@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create A post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<body class="bg-danger">
+    <nav class="navbar bg-">
+        <div class="container bg-black">
+        <a class="navbar-brand bg-black">
+            <img src="{{url_for('static',filename='img/skate-on_red.png')}}" alt="skate-on logo" width="" height="24" class="bg-black">
+        </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end bg-black ">
+            <a href="/dashboard" class="btn btn text-white ">Return to dashboard</a>
+            <a href="/logout" class="btn btn text-white ">Logout</a>
+        </div>
+    </nav>
+    <form action="/add/post" method="post" class="p-2 text-bg-dark  w-50 mx-auto">
+        <div class="d-flex justify-content-sapce-between">
+            <div >
+                <label for="=name">Comment</label>
+                <input type="text" name="comment"  class="form-control">
+            </div>
+            <div class="p-2 text-bg-dark  w-25 mx-auto">                    
+                    <label for="=instructions">URL for Pic</label>
+                    <input type="text" name="image" required>
+                    <input type="submit" value="Create" >
+                    <!-- <p ><a href="/new/sighting" class="btn btn link-info">Report</a> -->
+                    </div>
+            </div> 
+    </form>
+</body>
+</html>

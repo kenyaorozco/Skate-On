@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Parks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<body class="bg-danger">
+    <nav class="navbar bg-">
+        <div class="container bg-black">
+        <a class="navbar-brand bg-black" href="/">
+            <img src="{{url_for('static',filename='img/skate-on_red.png')}}" alt="skate-on logo" width="" height="24" class="bg-black">
+        </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end bg-black ">
+            <a href="/" class="btn btn text-white ">Skate</a>
+
+            <a href="/login" class="btn btn text-white ">Login</a>
+
+        </div>
+        </div>
+    </nav>
+        <div>
+            
+            <h1 class="text-center">Your Local Skate Parks:</h1>
+        </div>
+    <table class="  text-bg-dark w-75 mx-auto">
+        <tr>
+            <th>Shop Name</th>
+            <th>Location</th>
+    
+        </tr>
+            {% for park in parks %}
+            <tr>
+                <td>{{park['name']}}</td>
+                <td>{{park['location']['address1']}}</td>
+                <td>
+                    <img src="{{park['image_url']}}" alt="parkImage" height="50" width="50">
+                </td>
+            </tr>
+            {% endfor %}
+        
+    </table>
+    
+</body>
+</html>
